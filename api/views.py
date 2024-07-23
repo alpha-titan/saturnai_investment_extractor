@@ -4,6 +4,8 @@ from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 from rest_framework import status
+from django_ratelimit.decorators import ratelimit
+from django.utils.decorators import method_decorator
 from .serializers import FileUploadSerializer, FinancialDataSerializer
 from .models import FinancialData
 from .utils import chunk_text, extract_financial_data_from_chunk, merge_financial_data
@@ -14,6 +16,7 @@ logging.basicConfig(level=logging.INFO)
 class TranscriptUploadView(APIView):
     parser_classes = (MultiPartParser, FormParser)
 
+    @method_decorator(ratelimit(key='ip', rate='5/m', method='POST'))
     def post(self, request, format=None):
         logger.info("Received request to extract financial data")
         file_serializer = FileUploadSerializer(data=request.data)

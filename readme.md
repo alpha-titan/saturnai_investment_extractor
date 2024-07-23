@@ -61,6 +61,12 @@ This Django application allows users to upload transcript files containing finan
    ```bash
     OPENAI_API_KEY=your_openai_api_key
     ```
+4. **Setup the Redis Server for rate limit**:
+
+   ```bash
+    sudo apt-get install redis-server
+    pip install django-redis
+    ```
 
 5. **Run Migrations**:
 
