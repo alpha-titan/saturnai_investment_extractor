@@ -1,0 +1,110 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+
+# If your build process includes running Django tests, you can ignore test database files:
+*.sqlite3
+
+# If you are using the SQLite database:
+db.sqlite3
+
+# Django static and media files
+/staticfiles/
+/media/
+
+# Local environment variables
+.env
+
+# VS Code settings
+.vscode/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Installed packages
+*.egg
+*.egg-info
+dist/
+build/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pylint
+.pylint.d/
+
+# Pyre type checker
+.pyre/
+
+# IntelliJ IDEA
+.idea/
+
+# Node.js
+node_modules/
+
+# Logs
+*.log
+
+# Local configuration files
+config/
+*.local
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+out/
+
+# macOS
+.DS_Store
+
+# Linux
+*~
